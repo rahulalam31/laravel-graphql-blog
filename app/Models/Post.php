@@ -20,6 +20,6 @@ class Post extends Model
     // }
     public function tag()
     {
-        return $this->belongsTo(tag::class, 'tag_id', 'id');
+        return $this->belongsTo(Tag::class, 'tag_id', 'id');
     }
 }
