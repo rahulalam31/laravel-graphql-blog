@@ -42,3 +42,11 @@ type User {
     "When the account was last updated."
     updated_at: DateTime!
 }
+
+
+type Post {
+  id: ID!
+  title: String!
+  content: String!
+  tag: Tag! @belongsTo
+}
