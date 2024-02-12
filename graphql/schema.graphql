@@ -17,6 +17,9 @@ type Query {
       "Filters by name. Accepts SQL LIKE wildcards `%` and `_`."
       name: String @where(operator: "like")
     ): [User!]! @paginate(defaultCount: 10)
+
+    posts: [Post!]! @all
+    post(id: Int! @eq): Post @find
 }
 
 "Account of a person who utilizes this application."
